@@ -1,0 +1,385 @@
+@font-face {
+    font-family: "NotoSansArabic";
+    src: url(../font/NotoSansArabic.woff2) format("woff2-variations")
+}
+
+
+@font-face {
+    font-family: 'Amiri';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../font/Amiri.woff2) format('woff2');
+    unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+html,
+body {
+    margin: 0 0 0 0;
+    background-color: #f3f4f6;
+    color: #1b1b1f;
+    direction: rtl;
+    font-family: "NotoSansArabic";
+}
+
+img {
+    user-select: none;
+}
+
+
+#header {
+    background-color: #f3f4f66e;
+    backdrop-filter: blur(20px);
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    padding: 0;
+    top: 0px;
+}
+
+#header ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    list-style: none;
+    margin-left: 15px;
+    margin-right: 0px;
+}
+
+#right ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    list-style: none;
+}
+
+#right ul li {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#right ul li a {
+    text-decoration: none;
+}
+
+.icon_header {
+    width: 25px;
+    transition: 0.5s ease-in-out;
+}
+
+.icon_header:hover {
+    width: 30px;
+    transition: 0.5s ease-in-out;
+}
+
+#logo {
+    width: 40px;
+    cursor: pointer;
+}
+
+
+/* ======== المحتوى ======== */
+
+#content {
+    margin-top: 70px;
+}
+
+#info {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding: 0px;
+    list-style: none;
+    margin-left: 10px;
+    margin-right: 0px;
+    margin-top: 150px;
+}
+
+#info li {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 100%;
+    /* background-color: #dadada; */
+}
+
+#laptop {
+    display: block;
+    max-width: 100%;
+    margin-left: 15px;
+    margin-right: auto;
+}
+
+#info_text h1 {
+    text-align: right;
+    margin: 0;
+    background: #6BC077;
+    background: linear-gradient(to right, #467D4D 40%, #6BC077 74%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 30px;
+}
+
+#info_text p {
+    overflow-wrap: break-word;
+    text-align: justify;
+}
+
+#but {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#but button {
+    width: 150px;
+    padding: 10px;
+    border: 2px solid #6BC077;
+    border-radius: 7px;
+    font-family: "NotoSansArabic";
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#download {
+    background-color: #6BC077;
+    color: #ffffff;
+    transition: 0.5s ease-in-out;
+}
+
+#download:hover {
+    background-color: #57a561;
+    border: 2px solid #57a561;
+    transition: 0.5s ease-in-out;
+}
+
+#features {
+    background-color: #ffffff00;
+    color: #6BC077;
+    transition: 0.5s ease-in-out;
+}
+
+#features:hover {
+    background-color: #6BC077;
+    color: #ffffff;
+    transition: 0.5s ease-in-out;
+}
+
+/* features */
+
+.line {
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.line h2 {
+    margin: 0;
+    color: #6BC077;
+}
+
+.line img {
+    display: block;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#features_ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* padding: 0px; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* list-style: none; */
+    background-color: #e6e6e6;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 15px;
+}
+
+#features_ul li {
+    width: calc(100% / 2);
+    align-items: center;
+    border-radius: 7px;
+    color: #1b1b1f;
+}
+
+#features_ul li p {
+    text-align: right;
+    font-size: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    /* margin-right: 0px; */
+}
+
+#features_ul li img {
+    width: 15px;
+    margin-right: 8px;
+    vertical-align: middle
+}
+
+
+/* تحميل */
+
+#download_ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0px;
+    list-style: none;
+}
+
+#download_ul li {
+    width: calc(80% / 2);
+    background-color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 15px;
+    margin: 10px 10px 10px 10px;
+    box-shadow: #63636333 0px 2px 8px 0px;
+}
+
+.system_icon {
+    display: block;
+    width: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.download_icon {
+    display: block;
+    width: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.download_numbers {
+    color: #57a561;
+}
+
+
+/* Store */
+
+
+#down_store {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0px;
+    list-style: none;
+}
+
+#down_store li {
+    margin: 10px 10px 10px 10px;
+}
+
+#down_store li a {
+    margin: 0;
+    text-decoration: none;
+}
+
+#down_store li img {
+    width: 200px;
+}
+
+
+/* review */
+
+#review {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0px;
+    list-style: none;
+}
+
+#review li {
+    width: calc(80% / 2);
+    margin: 10px 10px 10px 10px;
+}
+
+#review li a {
+    margin: 0;
+    text-decoration: none;
+}
+
+#review li img {
+    max-width: 100%;
+}
+
+
+
+
+/* footer */
+
+
+#footer {
+    margin-top: 100px;
+    background-color: #1b1b1f;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px;
+}
+
+#Copyright {
+    margin: 0;
+}
+
+#alsarmad {
+    text-decoration: none;
+    font-weight: 600;
+    color: #467D4D;
+}
+
+@media (max-width: 1100px) {
+
+    #features_ul li p {
+        text-align: right;
+    }
+
+    #features_ul li {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 700px) {
+    #info {
+        display: block;
+        padding: 10px;
+        margin-top: 50px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    #info li {
+        margin-right: 0px;
+        margin-left: 0px;
+        margin-bottom: 50px;
+    }
+
+    #laptop {
+        display: block;
+        max-width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 400px) {
+
+    #download_ul li {
+        width: 90%;
+    }
+
+}
