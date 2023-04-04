@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "NotoSansArabic";
-    src: url(../font/NotoSansArabic.woff2) format("woff2-variations")
+    font-family: "Al_Jazeera";
+    src: url(../font/Al-Jazeera-Arabic-Bold.ttf) format("truetype")
 }
 
 
@@ -18,7 +18,7 @@ body {
     background-color: #f3f4f6;
     color: #1b1b1f;
     direction: rtl;
-    font-family: "NotoSansArabic";
+    font-family: "Al_Jazeera";
 }
 
 img {
@@ -139,7 +139,7 @@ img {
     padding: 10px;
     border: 2px solid #6BC077;
     border-radius: 7px;
-    font-family: "NotoSansArabic";
+    font-family: "Al_Jazeera";
     font-size: 15px;
     font-weight: 700;
     cursor: pointer;
