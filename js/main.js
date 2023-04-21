@@ -71,6 +71,7 @@ function Download(elementDown, elementPKG, link, numbersDown) {
             const urlParams = new URLSearchParams(query);
             const repo = urlParams.get("repo") || "desktop";
             const version = urlParams.get("version") || "0.0.0";
+            version == "0.0.0" ? window.location.href = "/" : false;
 
             updateInfo.innerHTML = "الإصدار المستخدم: " + version
 
@@ -100,7 +101,7 @@ function Download(elementDown, elementPKG, link, numbersDown) {
             console.log(error)
         }
     } // else {
-        // console.log("Not in update page.")
+    // console.log("Not in update page.")
     // }
 })();
 
