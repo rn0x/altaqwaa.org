@@ -1,25 +1,21 @@
-let features = document.getElementById("features");
+let releases = document.getElementById("releases");
 let download = document.getElementById("download");
 let features_ul = document.getElementById("features_ul");
 let download_ul = document.getElementById("download_ul");
 let logo = document.getElementById("logo");
-
-features.addEventListener("click", e => {
-    features_ul.scrollIntoView();
-});
 
 download.addEventListener("click", e => {
     download_ul.scrollIntoView();
 });
 
 logo.addEventListener("click", e => {
-    window.location.href = window.location.href;
+    window.location.href = "/";
 });
 
 
+const dataDesktop = await getReleasesData("rn0x", "Altaqwaa-Islamic-Desktop-Application");
+const dataAndroid = await getReleasesData("Alsarmad", "altaqwaa_android");
 
-let dataDesktop = await getReleasesData("rn0x", "Altaqwaa-Islamic-Desktop-Application");
-let dataAndroid = await getReleasesData("Alsarmad", "altaqwaa_android");
 let down_win_exe_setup = NumberOfDownloads(dataDesktop, "setup");
 let down_win_exe_portable = NumberOfDownloads(dataDesktop, "portable");
 let down_win_msi = NumberOfDownloads(dataDesktop, ".msi");
@@ -64,6 +60,49 @@ function Download(elementDown, elementPKG, link, numbersDown) {
     down.innerText = numbersDown;
 
 }
+
+(async function newUpdate() {
+
+    const updateInfo = document.getElementById("update_info");
+    if (updateInfo) {
+        // console.log("update page.")
+        try {
+            const query = window.location.search;
+            const urlParams = new URLSearchParams(query);
+            const repo = urlParams.get("repo") || "desktop";
+            const version = urlParams.get("version") || "0.0.0";
+
+            updateInfo.innerHTML = "الإصدار المستخدم: " + version
+
+            if (repo == "android") {
+                let data = dataAndroid;
+                if (version == data[0].tag_name.substring(1)) {
+                    window.location.href = "/"
+                } else {
+                    updateInfo.innerHTML = "الإصدار المستخدم: " + version + " الإصدار الأخير: " + data[0].tag_name.substring(1)
+                    releases.addEventListener("click", e => {
+                        window.location.href = "https://github.com/Alsarmad/altaqwaa_android/releases"
+                    });
+                }
+            } else {
+                let data = dataDesktop;
+                if (version == data[0].tag_name.substring(1)) {
+                    window.location.href = "/"
+                } else {
+                    updateInfo.innerHTML = "الإصدار المستخدم: " + version + " الإصدار الأخير: " + data[0].tag_name.substring(1)
+                    releases.addEventListener("click", e => {
+                        window.location.href = "https://github.com/rn0x/Altaqwaa-Islamic-Desktop-Application/releases"
+                    });
+                }
+            }
+
+        } catch (error) {
+            console.log(error)
+        }
+    } // else {
+        // console.log("Not in update page.")
+    // }
+})();
 
 async function getReleasesData(user, repo) {
     try {

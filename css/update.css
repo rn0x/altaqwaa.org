@@ -59,7 +59,7 @@ img {
     margin-right: 10px;
 }
 
-#right ul li a {
+a {
     text-decoration: none;
 }
 
@@ -80,7 +80,7 @@ img {
 }
 
 ::-webkit-scrollbar {
-    width: 9px;
+    width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -95,7 +95,6 @@ img {
     background: #57a561;
 }
 
-
 /* ======== المحتوى ======== */
 
 #content {
@@ -105,7 +104,8 @@ img {
 #info {
     display: flex;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
+    justify-content: center;  
     padding: 0px;
     list-style: none;
     margin-left: 10px;
@@ -116,19 +116,11 @@ img {
 #info li {
     margin-right: 20px;
     margin-left: 20px;
-    width: 100%;
     /* background-color: #dadada; */
 }
 
-#laptop {
-    display: block;
-    max-width: 100%;
-    margin-left: 15px;
-    margin-right: auto;
-}
-
 #info_text h1 {
-    text-align: right;
+    text-align: center;
     margin: 0;
     background: #6BC077;
     background: linear-gradient(to right, #467D4D 40%, #6BC077 74%);
@@ -139,7 +131,7 @@ img {
 
 #info_text p {
     overflow-wrap: break-word;
-    text-align: justify;
+    text-align: center;
 }
 
 #but {
@@ -172,19 +164,17 @@ img {
     transition: 0.5s ease-in-out;
 }
 
-#features {
+#releases {
     background-color: #ffffff00;
     color: #6BC077;
     transition: 0.5s ease-in-out;
 }
 
-#features:hover {
+#releases:hover {
     background-color: #6BC077;
     color: #ffffff;
     transition: 0.5s ease-in-out;
 }
-
-/* features */
 
 .line {
     display: block;
@@ -204,42 +194,6 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
-
-#features_ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    /* padding: 0px; */
-    padding-top: 10px;
-    padding-bottom: 10px;
-    /* list-style: none; */
-    background-color: #e6e6e6;
-    margin-left: 10px;
-    margin-right: 10px;
-    border-radius: 15px;
-}
-
-#features_ul li {
-    width: calc(100% / 2);
-    align-items: center;
-    border-radius: 7px;
-    color: #1b1b1f;
-}
-
-#features_ul li p {
-    text-align: right;
-    font-size: 15px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    /* margin-right: 0px; */
-}
-
-#features_ul li img {
-    width: 15px;
-    margin-right: 8px;
-    vertical-align: middle
-}
-
 
 /* تحميل */
 
@@ -287,6 +241,9 @@ img {
 
 /* Store */
 
+#store_title {
+    font-size: 20px;
+}
 
 #down_store {
     display: flex;
@@ -309,39 +266,11 @@ img {
     width: 200px;
 }
 
-
-/* review */
-
-#review {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 0px;
-    list-style: none;
-}
-
-#review li {
-    width: calc(80% / 2);
-    margin: 10px 10px 10px 10px;
-}
-
-#review li a {
-    margin: 0;
-    text-decoration: none;
-}
-
-#review li img {
-    max-width: 100%;
-}
-
-
-
-
 /* footer */
 
 
 #footer {
-    margin-top: 100px;
+    margin-top: 50px;
     background-color: #1b1b1f;
     text-align: center;
     color: #ffffff;
@@ -358,51 +287,8 @@ img {
     color: #467D4D;
 }
 
-
-
-/* SCREENSHOT  */
-
-.screenshot {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    padding: 0px;
-    list-style: none;
-    overflow-x: scroll;
-    direction: rtl;
-}
-
-.screenshot li {
-
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.screenshot li img {
-
-    max-width: 200px;
-
-}
-
-.desktop li img {
-    max-width: 400px;
-}
-
-@media (max-width: 1100px) {
-
-    #features_ul li p {
-        text-align: right;
-    }
-
-    #features_ul li {
-        width: 100%;
-    }
-
-}
-
 @media (max-width: 700px) {
+
     #info {
         display: block;
         padding: 10px;
@@ -417,12 +303,6 @@ img {
         margin-bottom: 50px;
     }
 
-    #laptop {
-        display: block;
-        max-width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-    }
 }
 
 @media (max-width: 400px) {
